@@ -279,6 +279,11 @@ module IRuby
         obj.to_svg
       end
 
+      respond_to :to_png
+      format 'image/png' do |obj|
+        obj.to_png
+      end
+
       respond_to :to_iruby
       format do |obj|
         obj.to_iruby
